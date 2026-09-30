@@ -75,6 +75,17 @@ defaults are conservative:
   for opening it to more operators over time.
 - **Audits before value.** Audits and a bug bounty come before launch.
 
+## Compliance controls
+
+The chain has a built-in compliance module. A designated authority can freeze
+an address: the address can then no longer sign transactions, send funds or be
+sent funds, apart from a few protocol refunds such as returned deposits or
+completed unbonding. Scheduled changes wait out a timelock. Emergency freezes
+take effect at once and expire on their own unless they are ratified.
+Governance can override any entry. Smart contracts can check whether an address
+is frozen through a precompile. The authority and timelocks for each network are
+set in its genesis, and the module is under legal review before mainnet.
+
 ## Repositories
 
 | Repository | What it is |
@@ -87,6 +98,7 @@ defaults are conservative:
 | [`whitepaper`](https://github.com/Konstellation-Network/whitepaper) | the whitepaper, as versioned releases |
 | [`explorer`](https://github.com/Konstellation-Network/explorer) | Blockscout explorer deployment |
 | [`faucet`](https://github.com/Konstellation-Network/faucet) | test-token faucet for devnet and testnet |
+| [`Scriipture`](https://github.com/Konstellation-Network/Scriipture) | write contracts in TypeScript and compile them to readable Solidity, with a built-in security-check pipeline (npm `scriipture`) |
 
 ## Learn more
 
